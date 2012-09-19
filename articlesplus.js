@@ -2,7 +2,7 @@ $(document).ready(function() {
 	// remove default topbar link div
 	$("#topbar .link") .empty()
         // Add Ask a Librarian and Classic Catalog links
-	$('#topbar .link').add('<a href="http://www.library.gwu.edu/help/reference/ask-a-librarian">Ask a Librarian</a> | <a href="http://surveyor.gelman.gwu.edu">Catalog</a> | <a href="http://libguides.gwu.edu/databases">Subject Databases</a> | <a href="http://www.library.gwu.edu/howdoi/aboutarticlesplus">About</a> | <a href="https://docs.google.com/spreadsheet/viewform?formkey=dDJBVlR3MHMzS3pDeWRPYU5vNkh0Z2c6MQ"  target="_blank">Feedback</a>');
+	$('#topbar .link').prepend('<a href="http://www.library.gwu.edu/help/reference/ask-a-librarian">Ask a Librarian</a> | <a href="http://surveyor.gelman.gwu.edu">Catalog</a> | <a href="http://libguides.gwu.edu/databases">Subject Databases</a> | <a href="http://www.library.gwu.edu/howdoi/aboutarticlesplus">About</a> | <a href="https://docs.google.com/spreadsheet/viewform?formkey=dDJBVlR3MHMzS3pDeWRPYU5vNkh0Z2c6MQ"  target="_blank">Feedback</a>');
 	
 	// Change Feedback link at top of page
 	$('#topbar .link a').last().attr('href', function() {
