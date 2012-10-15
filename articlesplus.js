@@ -12,7 +12,7 @@ $(document).ready(function() {
 
 	// Change message about number of results and add search tip	
 	var count = $('#summary .highlight:last').html( );
-	$('#summary').replaceWith('<div style="margin-top:5px;"><span class="highlight">' + count + '</span>&nbsp;results. <br><span id="refineSearchHelp" style="">Use quotation marks for exact phrases (e.g. "higher education").</span>&nbsp;</div>');
+	$('#summary').replaceWith('<div style="margin-top:5px;"><p><span class="highlight">' + count + '</span>&nbsp;results. <br><span id="refineSearchHelp" style="">Use quotation marks for exact phrases (e.g. "higher education").</span>&nbsp;</p></div>');
 
 	// Add inset note about catalog
 	
