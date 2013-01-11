@@ -21,6 +21,10 @@ $(document).ready(function() {
 
 	}
 
+	// Hide orange "Get Journal Article" button pointing to print holdings - temporary?
+	$('.bgh-get-document-button').hide();
+
+
 //end document.ready
 });
 
