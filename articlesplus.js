@@ -15,11 +15,10 @@ $(document).ready(function() {
 	$('#summary').replaceWith('<div style="margin-top:5px;"><p><span class="highlight">' + count + '</span>&nbsp;results. <br><span id="refineSearchHelp" style="">Use quotation marks for exact phrases (e.g. "higher education").</span>&nbsp;</p></div>');
 
 	// Add inset note about catalog
-	
-	if ($('#facet\\:library_catalog_filter[applied|="true"]').length > 0) {
-		$('label[for|="facet:library_catalog_filter"]').append('<div class="excluded"><table cellspacing="0" cellpadding="5"><tbody><tr><td><span class="highlight">All items not included yet. </span><a href="http://surveyor.gelman.gwu.edu" target="_blank">Go to complete catalog</a>.</td></tr></tbody></table></div>');
-
-	}
+	// hiding since issues seem solved.	
+	//	if ($('#facet\\:library_catalog_filter[applied|="true"]').length > 0) {
+	//		$('label[for|="facet:library_catalog_filter"]').append('<div class="excluded"><table cellspacing="0" cellpadding="5"><tbody><tr><td><span class="highlight">All items not included yet. </span><a href="http://surveyor.gelman.gwu.edu" target="_blank">Go to complete catalog</a>.</td></tr></tbody></table></div>');
+	//	}
 
 	// Hide orange "Get Journal Article" button pointing to print holdings - temporary?
 	$('.bgh-get-document-button').hide();
