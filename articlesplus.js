@@ -23,6 +23,25 @@ $(document).ready(function() {
 	// Hide orange "Get Journal Article" button pointing to print holdings - temporary?
 	$('.bgh-get-document-button').hide();
 
+	// from mreidsma Prettify Best Bets
+	if($(".best-bet-list").length > 0) {
+  
+		var bbTitle = $(".best-bet-title").text();
+		var bbURL = $(".best-bet").find(".more").find("a").attr("href");
+		var bbDesc = $(".best-bet-body").find(".detail").text();
+ 
+		if(bbDesc === ".") {
+ 
+			$("li.best-bet").html('<div class="theme-best-bet-icon"></div><div class="best-bet-title"><a href="' + bbURL + '">' + bbTitle + '</a></div>');
+ 
+			} else { // Has a description
+ 
+			$("li.best-bet").html('<div class="theme-best-bet-icon"></div><div class="best-bet-title"><a href="' + bbURL + '">' + bbTitle + '</a></div><div class="best-bet-body"><div class="detail"><p>' + bbDesc + '</p></div>');
+ 
+		}
+ 
+	}
+
 
 //end document.ready
 });
