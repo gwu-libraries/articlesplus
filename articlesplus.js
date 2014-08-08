@@ -41,7 +41,8 @@ $(document).ready(function() {
 		}
  
 	}
-
+	// provide alternatives in case of error
+	//$(".errorMessage").append("  <br>Please try one of the <a href=\'http://libguides.gwu.edu/databases\'>Libraries\' subject databases</a> or the <a href=\'http://surveyor.gelman.gwu.edu\'>catalog</a>.");  
 
 //end document.ready
 });
