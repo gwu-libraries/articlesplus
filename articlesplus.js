@@ -1,14 +1,17 @@
 $(document).ready(function() {
-	// remove default topbar link div
-	$("#topbar .link") .empty()
+	// get chat box before emptying link div	
+	var chatimg = $(".chat.top");
+	// empty topbar link div	
+	$("#topbar .link").empty();
         // Add Ask a Librarian and Classic Catalog links
-	$('#topbar .link').prepend('<a href="http://www.library.gwu.edu/help/reference/ask-a-librarian">Ask a Librarian</a> | <a href="http://findit.library.gwu.edu/catalog">Catalog</a> | <a href="http://libguides.gwu.edu/databases">Subject Databases</a> | <a href="http://www.library.gwu.edu/howdoi/aboutarticlesplus">About</a> | <a href="https://docs.google.com/spreadsheet/viewform?formkey=dDJBVlR3MHMzS3pDeWRPYU5vNkh0Z2c6MQ"  target="_blank">Found a Problem?</a>');
+	$('#topbar .link').prepend('<a href="http://www.library.gwu.edu/help/reference/ask-a-librarian">Ask a Librarian</a> | <a href="http://findit.library.gwu.edu/catalog">Catalog</a> | <a href="http://libguides.gwu.edu/databases">Subject Databases</a> | <a href="http://www.library.gwu.edu/howdoi/aboutarticlesplus">About</a> | <a href="https://docs.google.com/spreadsheet/viewform?formkey=dDJBVlR3MHMzS3pDeWRPYU5vNkh0Z2c6MQ"  target="_blank">Found a Problem?</a>&nbsp;&nbsp;');
 	
-	// Change Feedback link at top of page
+	// Change Feedback link to include URL to pass to Google Form 
 	$('#topbar .link a').last().attr('href', function() {
 		return this.href + '&entry_7=' + encodeURIComponent(location.href);	
 	}); 
-
+	// add chat link back
+	$("#topbar .link").append(chatimg);
 
 	// Change message about number of results and add search tip	
 	var count = $('#summary .highlight:last').html( );
